@@ -10,8 +10,8 @@ body {
     font-family: arial;
   }
 
-#app button {
-    border: none;
+#addButt {
+  border: none;
     outline: 0;
     padding: 12px;
     color: white;
@@ -20,4 +20,4 @@ body {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-  }
+}

@@ -19,7 +19,7 @@
         <p class="price">
             Price: {{product.price}}
           </p>
-          <p><button>Purchase Lesson</button></p>
+          <button id="addButt" v-on:click="addItem">Purchase Lesson</button>
     </div>
     
     <!-------------------------------------------------------------------------------------------->
@@ -28,20 +28,23 @@
     el: '#app' ,
     data: {
         sitename: "LessonRUs",
-        showProduct: true,
         product: {
           id: 1001,
           title: "Japanese Lesson",
           description: "Japanese lessons tought by <em>professional</em> Japanese speakers!",
           price: "£20",
           loc: "London",
-          image: "assets/japanese.png",
-          availableInventory: 5
+          image: "assets/japanese.png"
     },
         cart:[]
 },
+    methods: {
+        addItem: function () {
+            this.cart.push(this.product.id);
+                
+}
+}
 });
-
     
     </script>
     </body>
