@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Web App|Week 3</title>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="product.image">
+        <h1 v-text="product.title"></h1>
+        <p class="description" v-html="product.description"></p>
+        <p class="Location">
+            Location: {{product.loc}}
+        </p>
+        <p class="price">
+            Price: {{product.price}}
+          </p>
+          <p><button>Purchase Lesson</button></p>
+    </div>
+    
+    <!-------------------------------------------------------------------------------------------->
+    <script type="text/javascript">
+    let webstore = new Vue({ // The Vue instance
+    el: '#app' ,
+    data: {
+        sitename: "LessonRUs",
+        showProduct: true,
+        product: {
+          id: 1001,
+          title: "Japanese Lesson",
+          description: "Japanese lessons tought by <em>professional</em> Japanese speakers!",
+          price: "£20",
+          loc: "London",
+          image: "assets/japanese.png",
+          availableInventory: 5
+    },
+        cart:[]
+},
+});
+
+    
+    </script>
+    </body>
+</html>
