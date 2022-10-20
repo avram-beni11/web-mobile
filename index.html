@@ -19,6 +19,7 @@
         <p class="price">
             Price: {{product.price}}
           </p>
+          <p v-html>Spaces: {{product.spaces}}</p>
           <button id="addButt" v-on:click="addItem">Purchase Lesson</button>
     </div>
     
@@ -34,6 +35,7 @@
           description: "Japanese lessons tought by <em>professional</em> Japanese speakers!",
           price: "£20",
           loc: "London",
+          spaces: 5,
           image: "assets/japanese.png"
     },
         cart:[]
