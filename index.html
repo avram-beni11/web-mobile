@@ -27,7 +27,7 @@
         <p v-html>Spaces: {{checkspace}}</p>
         <button class="Addbtn" id="addButt" v-on:click="addItem" v-if="canAddToCart">Purchase Lesson</button>
         <button disabled="true" class="Addbtn" id="addButt2" v-else>Purchase Lesson</button>
-        <button class="btn"><span class="fa fa-shopping-basket">{{cartCount}}</span>Basket</button>
+        <button class="btn">{{cartCount}}<span class="fa fa-shopping-basket"></span>Basket</button>
 
 
 
