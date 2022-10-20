@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Coursework</title>
 </head>
+
 <body>
+    <div id="basket">
+        <button class="btn"><i class="fa fa-shopping-basket"></i></i>Basket</button>
+
+
+
+    </div>
+
+
     <div id="app">
         <img v-bind:src="product.image">
         <h1 v-text="product.title"></h1>
@@ -18,36 +30,36 @@
         </p>
         <p class="price">
             Price: {{product.price}}
-          </p>
-          <p v-html>Spaces: {{product.spaces}}</p>
-          <button id="addButt" v-on:click="addItem">Purchase Lesson</button>
+        </p>
+        <p v-html>Spaces: {{product.spaces}}</p>
+        <button id="addButt" v-on:click="addItem">Purchase Lesson</button>
     </div>
-    
+
     <!-------------------------------------------------------------------------------------------->
     <script type="text/javascript">
-    let webstore = new Vue({ // The Vue instance
-    el: '#app' ,
-    data: {
-        sitename: "LessonRUs",
-        product: {
-          id: 1001,
-          title: "Japanese Lesson",
-          description: "Japanese lessons tought by <em>professional</em> Japanese speakers!",
-          price: "£20",
-          loc: "London",
-          spaces: 5,
-          image: "assets/japanese.png"
-    },
-        cart:[]
-},
-    methods: {
-        addItem: function () {
-            this.cart.push(this.product.id);
-                
-}
-}
-});
-    
+        let webstore = new Vue({ // The Vue instance
+            el: '#app',
+            data: {
+                sitename: "LessonRUs",
+                product: {
+                    id: 1001,
+                    title: "Japanese Lesson",
+                    description: "Japanese lessons tought by <em>professional</em> Japanese speakers!",
+                    price: "£20",
+                    loc: "London",
+                    spaces: 5,
+                    image: "assets/japanese.png"
+                },
+                cart: []
+            },
+            methods: {
+                addItem: function() {
+                    this.cart.push(this.product.id);
+
+                }
+            }
+        });
     </script>
-    </body>
+</body>
+
 </html>
