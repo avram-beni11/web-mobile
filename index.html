@@ -57,7 +57,18 @@
                     this.cart.push(this.product.id);
 
                 }
+
+            },
+            computed: {
+                function() {
+
+                },
+                canAddToCart: function() {
+                    return this.product.spaces > this.cartCount
+                }
+
             }
+
         });
     </script>
 </body>
