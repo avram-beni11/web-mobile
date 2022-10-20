@@ -13,13 +13,6 @@
 </head>
 
 <body>
-    <div id="basket">
-        <button class="btn" {{cartCount}}><span class="fa fa-shopping-basket"></span>Basket</button>
-
-
-
-    </div>
-
 
     <div id="app">
         <img v-bind:src="product.image">
@@ -32,7 +25,14 @@
             Price: {{product.price}}
         </p>
         <p v-html>Spaces: {{product.spaces}}</p>
-        <button id="addButt" v-on:click="addItem">Purchase Lesson</button>
+        <button class="Addbtn" id="addButt" v-on:click="addItem" v-if="canAddToCart">Purchase Lesson</button>
+        <button disabled="true" class="Addbtn" id="addButt2" v-else>Purchase Lesson</button>
+        <button class="btn"><span class="fa fa-shopping-basket">{{cartCount}}</span>Basket</button>
+
+
+
+    </div>
+
     </div>
 
     <!-------------------------------------------------------------------------------------------->
@@ -61,7 +61,7 @@
             },
             computed: {
                 cartCount: function() {
-
+                    return this.cart.length || "";
 
                 },
                 canAddToCart: function() {

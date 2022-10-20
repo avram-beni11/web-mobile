@@ -26,11 +26,10 @@ body {
     background-color: rgb(59, 59, 59);
 }
 
-#basket {
-    float: right;
-}
-
 .btn {
+    position: relative;
+    left: 1300px;
+    top: -350px;
     border: none;
     font-size: 20px;
     cursor: pointer;
@@ -39,4 +38,16 @@ body {
 
 .btn:hover {
     background-color: #D3D3D3;
+}
+
+#addButt2 {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
 }
