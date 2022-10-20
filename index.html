@@ -14,7 +14,7 @@
 
 <body>
     <div id="basket">
-        <button class="btn"><i class="fa fa-shopping-basket"></i></i>Basket</button>
+        <button class="btn" {{cartCount}}><span class="fa fa-shopping-basket"></span>Basket</button>
 
 
 
@@ -49,7 +49,6 @@
                     loc: "London",
                     spaces: 5,
                     image: "assets/japanese.png"
-                    
                 },
                 cart: []
             },
@@ -61,7 +60,8 @@
 
             },
             computed: {
-                function() {
+                cartCount: function() {
+
 
                 },
                 canAddToCart: function() {
