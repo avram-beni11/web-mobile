@@ -14,7 +14,7 @@
 
 <body>
     <!--Below we are introducing the div which will hold all of the html-->
-    <!--we gave this div an ID and will use this ID in javascript to write code using vue.-->>
+    <!--we gave this div an ID and will use this ID in javascript to write code using vue.-->
     <div id="app">
         <img v-bind:src="product.image">
         <h1 v-text="product.title"></h1>
@@ -28,7 +28,7 @@
         </p>
         <p v-html>Spaces: {{checkspace}}</p>
         <!--the line above is calling a function found in the javascript code called checkspace which decreases the number of spaces based on what is added to basket/
-            how many times purchase is clicked-->>
+            how many times purchase is clicked-->
         <button class="Addbtn" id="addButt" v-on:click="addItem" v-if="canAddToCart">Purchase Lesson</button>
         <button disabled="true" class="Addbtn" id="addButt2" v-else>Purchase Lesson</button>
         <button class="btn">{{cartCount}}<span class="fa fa-shopping-basket"></span>Basket</button>
